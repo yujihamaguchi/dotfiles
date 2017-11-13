@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "cider" "cider.el" (23050 8512 355815 818000))
+;;;### (autoloads nil "cider" "cider.el" (23050 11302 286852 114000))
 ;;; Generated autoloads from cider.el
 
 (autoload 'cider-version "cider" "\
@@ -40,8 +40,8 @@ gets associated with it.
 
 ;;;***
 
-;;;### (autoloads nil "cider-apropos" "cider-apropos.el" (23050 8512
-;;;;;;  283823 910000))
+;;;### (autoloads nil "cider-apropos" "cider-apropos.el" (23050 11302
+;;;;;;  210854 545000))
 ;;; Generated autoloads from cider-apropos.el
 
 (autoload 'cider-apropos "cider-apropos" "\
@@ -79,7 +79,7 @@ Shortcut for (cider-apropos-select <query> nil t).
 ;;;***
 
 ;;;### (autoloads nil "cider-browse-ns" "cider-browse-ns.el" (23050
-;;;;;;  8512 275824 809000))
+;;;;;;  11302 202854 801000))
 ;;; Generated autoloads from cider-browse-ns.el
 
 (autoload 'cider-browse-ns "cider-browse-ns" "\
@@ -95,7 +95,7 @@ List all loaded namespaces in BUFFER.
 ;;;***
 
 ;;;### (autoloads nil "cider-browse-spec" "cider-browse-spec.el"
-;;;;;;  (23050 8512 343817 167000))
+;;;;;;  (23050 11302 270852 626000))
 ;;; Generated autoloads from cider-browse-spec.el
 
 (autoload 'cider-browse-spec "cider-browse-spec" "\
@@ -114,7 +114,7 @@ No filter applied if the regexp is the empty string.
 ;;;***
 
 ;;;### (autoloads nil "cider-classpath" "cider-classpath.el" (23050
-;;;;;;  8512 363814 919000))
+;;;;;;  11302 294851 857000))
 ;;; Generated autoloads from cider-classpath.el
 
 (autoload 'cider-classpath "cider-classpath" "\
@@ -129,8 +129,8 @@ Open a classpath entry.
 
 ;;;***
 
-;;;### (autoloads nil "cider-debug" "cider-debug.el" (23050 8512
-;;;;;;  279824 359000))
+;;;### (autoloads nil "cider-debug" "cider-debug.el" (23050 11302
+;;;;;;  206854 674000))
 ;;; Generated autoloads from cider-debug.el
 
 (autoload 'cider-debug-defun-at-point "cider-debug" "\
@@ -147,7 +147,7 @@ a number of keys will be prompted to the user.
 ;;;***
 
 ;;;### (autoloads nil "cider-grimoire" "cider-grimoire.el" (23050
-;;;;;;  8512 319819 864000))
+;;;;;;  11302 246853 394000))
 ;;; Generated autoloads from cider-grimoire.el
 
 (autoload 'cider-grimoire-web "cider-grimoire" "\
@@ -171,7 +171,7 @@ opposite of what that option dictates.
 ;;;***
 
 ;;;### (autoloads nil "cider-inspector" "cider-inspector.el" (23050
-;;;;;;  8512 311820 763000))
+;;;;;;  11302 238853 650000))
 ;;; Generated autoloads from cider-inspector.el
 
 (autoload 'cider-inspect-last-sexp "cider-inspector" "\
@@ -207,7 +207,7 @@ current buffer's namespace.
 ;;;***
 
 ;;;### (autoloads nil "cider-macroexpansion" "cider-macroexpansion.el"
-;;;;;;  (23050 8512 351816 268000))
+;;;;;;  (23050 11302 278852 370000))
 ;;; Generated autoloads from cider-macroexpansion.el
 
 (autoload 'cider-macroexpand-1 "cider-macroexpansion" "\
@@ -224,8 +224,8 @@ Invoke \\=`macroexpand-all\\=` on the expression preceding point.
 
 ;;;***
 
-;;;### (autoloads nil "cider-mode" "cider-mode.el" (23050 8512 291823
-;;;;;;  11000))
+;;;### (autoloads nil "cider-mode" "cider-mode.el" (23050 11302 218854
+;;;;;;  290000))
 ;;; Generated autoloads from cider-mode.el
 
 (defvar cider-mode-line '(:eval (format " cider[%s]" (cider--modeline-info))) "\
@@ -254,7 +254,7 @@ Minor mode for REPL interaction from a Clojure buffer.
 ;;;***
 
 ;;;### (autoloads nil "cider-repl-history" "cider-repl-history.el"
-;;;;;;  (23050 8512 339817 617000))
+;;;;;;  (23050 11302 266852 754000))
 ;;; Generated autoloads from cider-repl-history.el
 
 (autoload 'cider-repl-history "cider-repl-history" "\
@@ -264,8 +264,8 @@ Display items in the CIDER command history in another buffer.
 
 ;;;***
 
-;;;### (autoloads nil "cider-scratch" "cider-scratch.el" (23050 8512
-;;;;;;  299822 112000))
+;;;### (autoloads nil "cider-scratch" "cider-scratch.el" (23050 11302
+;;;;;;  226854 34000))
 ;;; Generated autoloads from cider-scratch.el
 
 (autoload 'cider-scratch "cider-scratch" "\
@@ -276,7 +276,7 @@ Go to the scratch buffer named `cider-scratch-buffer-name'.
 ;;;***
 
 ;;;### (autoloads nil "cider-selector" "cider-selector.el" (23050
-;;;;;;  8512 359815 369000))
+;;;;;;  11302 290851 986000))
 ;;; Generated autoloads from cider-selector.el
 
 (autoload 'cider-selector "cider-selector" "\
@@ -291,8 +291,8 @@ See `def-cider-selector-method' for defining new methods.
 
 ;;;***
 
-;;;### (autoloads nil "cider-test" "cider-test.el" (23050 8512 347816
-;;;;;;  717000))
+;;;### (autoloads nil "cider-test" "cider-test.el" (23050 11302 274852
+;;;;;;  497000))
 ;;; Generated autoloads from cider-test.el
 
 (defvar cider-auto-test-mode nil "\
@@ -316,8 +316,8 @@ nothing if no tests are defined or if the file failed to load.
 
 ;;;***
 
-;;;### (autoloads nil "cider-util" "cider-util.el" (23050 8512 355815
-;;;;;;  818000))
+;;;### (autoloads nil "cider-util" "cider-util.el" (23050 11302 282852
+;;;;;;  241000))
 ;;; Generated autoloads from cider-util.el
 
 (autoload 'cider-view-manual "cider-util" "\
@@ -331,7 +331,7 @@ View the manual in your default browser.
 ;;;;;;  "cider-doc.el" "cider-eldoc.el" "cider-interaction.el" "cider-overlays.el"
 ;;;;;;  "cider-pkg.el" "cider-popup.el" "cider-repl.el" "cider-resolve.el"
 ;;;;;;  "cider-stacktrace.el" "nrepl-client.el" "nrepl-dict.el")
-;;;;;;  (23050 8512 367814 470000))
+;;;;;;  (23050 11302 298851 730000))
 
 ;;;***
 
