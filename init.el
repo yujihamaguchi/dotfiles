@@ -42,3 +42,7 @@
 
 (require 'paredit)
 (add-hook 'clojure-mode-hook 'paredit-mode)
+
+(require 'mozc)
+(set-language-environment "Japanese")
+(setq default-input-method "japanese-mozc")
