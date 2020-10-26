@@ -88,3 +88,4 @@
 (set-frame-parameter nil 'fullscreen 'maximized)
 
 (global-set-key "\C-h" `delete-backward-char)
+(setq ring-bell-function 'ignore)
