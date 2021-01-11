@@ -64,13 +64,13 @@
      (add-to-list 'ac-modes 'cider-mode)
      (add-to-list 'ac-modes 'cider-repl-mode)))
 
-; (require 'clj-refactor)
+(require 'clj-refactor)
 
 (defun my-clojure-mode-hook ()
-  ;  (clj-refactor-mode 1)
+    (clj-refactor-mode 1)
     (yas-minor-mode 1) ; for adding require/use/import statements
     (subword-mode 1)
-  ;  (cljr-add-keybindings-with-prefix "C-c C-m")
+    (cljr-add-keybindings-with-prefix "C-c C-m")
     ;; This choice of keybinding leaves cider-macroexpand-1 unbound
     )
 
