@@ -30,17 +30,20 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(cua-mode t nil (cua-base))
  '(package-selected-packages
-   '(clj-refactor markdown-mode ac-cider company multi-term helm-descbinds helm spinner queue clojure-mode))
+   (quote
+    (clj-refactor markdown-mode ac-cider company multi-term helm-descbinds helm spinner queue clojure-mode)))
  '(safe-local-variable-values
-   '((cider-ns-refresh-after-fn . "integrant.repl/resume")
-     (cider-ns-refresh-before-fn . "integrant.repl/suspend"))))
+   (quote
+    ((cider-ns-refresh-after-fn . "integrant.repl/resume")
+     (cider-ns-refresh-before-fn . "integrant.repl/suspend")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "IBM Plex Mono" :foundry "IBM " :slant normal :weight normal :height 102 :width normal)))))
 
 (require 'paredit)
 (add-hook 'clojure-mode-hook 'paredit-mode)
@@ -88,6 +91,9 @@
 
 ;; (set-frame-parameter nil 'fullscreen 'maximized)
 
-(global-set-key "\C-h" `delete-backward-char)
 (setq ring-bell-function 'ignore)
 (setq cider-repl-buffer-size-limit 1)
+(global-set-key (kbd "<deletechar>") 'backward-kill-word)
+
+(define-key key-translation-map (kbd "<next>") (kbd "<M-down>"))
+(define-key key-translation-map (kbd "<prior>") (kbd "<M-up>"))
