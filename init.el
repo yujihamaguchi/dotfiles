@@ -97,3 +97,4 @@
 
 (define-key key-translation-map (kbd "<next>") (kbd "<M-down>"))
 (define-key key-translation-map (kbd "<prior>") (kbd "<M-up>"))
+(global-set-key "\C-h" `delete-backward-char)
