@@ -36,7 +36,9 @@
     (clj-refactor markdown-mode ac-cider company multi-term helm-descbinds helm spinner queue clojure-mode)))
  '(safe-local-variable-values
    (quote
-    ((cider-ns-refresh-after-fn . "integrant.repl/resume")
+    ((cider-refresh-after-fn . "integrant.repl/resume")
+     (cider-refresh-before-fn . "integrant.repl/suspend")
+     (cider-ns-refresh-after-fn . "integrant.repl/resume")
      (cider-ns-refresh-before-fn . "integrant.repl/suspend")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -89,12 +91,10 @@
 (add-hook 'cider-repl-mode-hook #'cider-company-enable-fuzzy-completion)
 (add-hook 'cider-mode-hook #'cider-company-enable-fuzzy-completion)
 
-;; (set-frame-parameter nil 'fullscreen 'maximized)
-
 (setq ring-bell-function 'ignore)
 (setq cider-repl-buffer-size-limit 1)
-(global-set-key (kbd "<deletechar>") 'backward-kill-word)
 
 (define-key key-translation-map (kbd "<next>") (kbd "<M-down>"))
 (define-key key-translation-map (kbd "<prior>") (kbd "<M-up>"))
 (global-set-key "\C-h" `delete-backward-char)
+
