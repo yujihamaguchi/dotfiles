@@ -33,7 +33,7 @@
  '(cua-mode t nil (cua-base))
  '(package-selected-packages
    (quote
-    (clj-refactor markdown-mode ac-cider company multi-term helm-descbinds helm spinner queue clojure-mode)))
+    (org-tree-slide clj-refactor markdown-mode ac-cider company multi-term helm-descbinds helm spinner queue clojure-mode)))
  '(safe-local-variable-values
    (quote
     ((cider-refresh-after-fn . "integrant.repl/resume")
@@ -98,3 +98,10 @@
 (define-key key-translation-map (kbd "<prior>") (kbd "<M-up>"))
 (global-set-key "\C-h" `delete-backward-char)
 
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+(require 'org-tree-slide)
+(with-eval-after-load "org-tree-slide"
+  (define-key org-tree-slide-mode-map (kbd "<f9>") 'org-tree-slide-move-previous-tree)
+  (define-key org-tree-slide-mode-map (kbd "<f10>") 'org-tree-slide-move-next-tree))
+(define-key org-mode-map (kbd "<f8>") 'org-tree-slide-mode)
+(define-key org-mode-map (kbd "S-<f8>") 'org-tree-slide-skip-done-toggle)
