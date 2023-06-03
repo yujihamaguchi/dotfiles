@@ -32,14 +32,12 @@
  ;; If there is more than one, they won't work right.
  '(cua-mode t nil (cua-base))
  '(package-selected-packages
-   (quote
-    (org-tree-slide clj-refactor markdown-mode ac-cider company multi-term helm-descbinds helm spinner queue clojure-mode)))
+   '(org-tree-slide clj-refactor markdown-mode ac-cider company multi-term helm-descbinds helm spinner queue clojure-mode))
  '(safe-local-variable-values
-   (quote
-    ((cider-refresh-after-fn . "integrant.repl/resume")
+   '((cider-refresh-after-fn . "integrant.repl/resume")
      (cider-refresh-before-fn . "integrant.repl/suspend")
      (cider-ns-refresh-after-fn . "integrant.repl/resume")
-     (cider-ns-refresh-before-fn . "integrant.repl/suspend")))))
+     (cider-ns-refresh-before-fn . "integrant.repl/suspend"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -54,7 +52,7 @@
 ;; (set-language-environment "Japanese")
 (setq default-input-method "japanese-mozc")
 
-(require 'helm-config)
+(require 'helm)
 (helm-mode 1)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 
