@@ -31,6 +31,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(cua-mode t nil (cua-base))
+ '(org-todo-keyword-faces '(("TODO" . "red") ("DONE" . "gray") ("WAIT" . "blue")))
+ '(org-todo-keywords '((sequence "TODO" "WAIT" "|" "DONE")))
  '(package-selected-packages
    '(org-tree-slide clj-refactor markdown-mode ac-cider company multi-term helm-descbinds helm spinner queue clojure-mode))
  '(safe-local-variable-values
@@ -103,3 +105,7 @@
   (define-key org-tree-slide-mode-map (kbd "<f10>") 'org-tree-slide-move-next-tree))
 (define-key org-mode-map (kbd "<f8>") 'org-tree-slide-mode)
 (define-key org-mode-map (kbd "S-<f8>") 'org-tree-slide-skip-done-toggle)
+
+(setq default-frame-alist
+      '((width . 1712)
+        (height . 853)))
