@@ -3,4 +3,8 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-
+(setq org-todo-keywords '((sequence "TODO" "WAIT" "DONE")))
+(setq org-todo-keyword-faces
+      '(("TODO" . org-warning)
+        ("DONE" . (:foreground "RosyBrown" :weight bold))
+	("WAIT" . (:foreground "blue" :weight bold))))
